@@ -14,7 +14,9 @@
   "scripts": {
     "dev": "tsup src/index.ts --format cjs,esm --sourcemap --dts --publicDir public --watch --onSuccess \"node --enable-source-maps --no-node-snapshot dist/index.js\"",
     "start": "node --enable-source-maps --no-node-snapshot dist/index.js",
-    "build": "tsup src/index.ts --format cjs,esm --sourcemap --dts --clean --publicDir public"
+    "build": "tsup src/index.ts --format cjs,esm --sourcemap --dts --clean --publicDir public",
+    "start:local": "SERVER_ENV=local SERVER_HOST=127.0.0.1 SERVER_PORT=8000 node --enable-source-maps --no-node-snapshot dist/index.js",
+    "dev:local": "tsup src/index.ts --format cjs,esm --sourcemap --dts --publicDir public --watch --onSuccess \"npm run start:local\""
   },
   "author": "Vinlic",
   "license": "ISC",
