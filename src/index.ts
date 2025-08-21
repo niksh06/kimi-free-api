@@ -3,6 +3,7 @@
 import environment from "@/lib/environment.ts";
 import config from "@/lib/config.ts";
 import "@/lib/initialize.ts";
+import "@/lib/proxy.ts";
 import server from "@/lib/server.ts";
 import routes from "@/api/routes/index.ts";
 import logger from "@/lib/logger.ts";
